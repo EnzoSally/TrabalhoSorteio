@@ -18,6 +18,18 @@ def main():
     print("Sua combinação de números da Mega-Sena é:")
     print(combinacao)
 
+aposta = []
+
+while len(aposta) < 6:
+    dezena = input('Digite uma dezena da aposta: ')
+    if dezena not in aposta and dezena < 60:
+        aposta.append(dezena)
+    elif dezena > 60:
+        print("O número deve ser menor do que 60")
+    else:
+        print("Número já foi colocado, por favor escolha outro.")
+
+
 if __name__ == '__main__':
     main()
 
