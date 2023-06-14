@@ -1,11 +1,17 @@
 import random
-main = True
-resultado = [3,16,23,41,45,57]
 
 def gerar_combinacao_mega_sena():
     numeros = random.sample(range(1, 61), 6)
     numeros.sort()
     return numeros
+
+def contador():
+    contador = 0
+    maximo_sorteios = 10
+    while contador > maximo_sorteios:
+        contador += 1
+        sorteio = gerar_combinacao_mega_sena()
+        print(f"Sorteio {contador}: {sorteio}")
 
 def main():
     combinacao = gerar_combinacao_mega_sena()
@@ -15,6 +21,6 @@ def main():
 if __name__ == '__main__':
     main()
 
-while main() != resultado:
-    if main() == resultado:
-        main()
+
+    
+
