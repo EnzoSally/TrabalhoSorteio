@@ -21,7 +21,7 @@ def main():
 aposta = []
 
 while len(aposta) < 6:
-    dezena = input('Digite uma dezena da aposta: ')
+    dezena = int(input('Digite uma dezena da aposta: '))
     if dezena not in aposta and dezena < 60:
         aposta.append(dezena)
     elif dezena > 60:
