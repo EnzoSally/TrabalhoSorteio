@@ -7,8 +7,8 @@ def gerar_combinacao_mega_sena():
 
 def contador():
     contador = 0
-    maximo_sorteios = 10
-    while contador > maximo_sorteios:
+    maximo_sorteios = 10000000
+    while contador < maximo_sorteios:
         contador += 1
         sorteio = gerar_combinacao_mega_sena()
         print(f"Sorteio {contador}: {sorteio}")
@@ -28,6 +28,13 @@ while len(aposta) < 6:
         print("O número deve ser menor do que 60")
     else:
         print("Número já foi colocado, por favor escolha outro.")
+
+while main() != aposta:
+        contador()
+        
+    
+    
+
 
 
 if __name__ == '__main__':
